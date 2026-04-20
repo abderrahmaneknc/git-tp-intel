@@ -1,0 +1,30 @@
+package com.isi.msscolarite.Entities;
+
+import com.isi.msscolarite.Model.Formation;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Etudiant {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idEtudiant;
+    private String nom;
+    @Temporal(TemporalType.DATE)
+    private Date dateN;
+    private String promo;
+    @Temporal(TemporalType.DATE)
+    private Date dateInsc;
+    @ManyToOne
+    private Etablissement etablissement;
+    private Long idFormation;
+    @Transient
+    private Formation formation;
+}
