@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ms-registry" />
+        <module name="config-server" />
       </profile>
-      <profile name="Annotation profile for ms-formation" enabled="true">
+      <profile name="Annotation profile for ms-scolarite" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -23,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
       <module name="ms-formation" options="-parameters" />
       <module name="ms-registry" options="-parameters" />
       <module name="ms-scolarite" options="-parameters" />
